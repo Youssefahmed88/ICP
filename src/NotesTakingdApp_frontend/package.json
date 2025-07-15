@@ -1,0 +1,33 @@
+{
+  "name": "NotesTakingdApp_frontend",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "setup": "npm i && dfx canister create NotesTakingdApp_backend && dfx generate NotesTakingdApp_backend && dfx deploy",
+    "start": "vite --port 3000",
+    "prebuild": "dfx generate internet_identity",
+    "build": "tsc && vite build",
+    "format": "prettier --write \"src/**/*.{json,js,jsx,ts,tsx,css,scss}\""
+  },
+  "dependencies": {
+    "@dfinity/agent": "^2.1.3",
+    "@dfinity/candid": "^2.1.3",
+    "@dfinity/principal": "^2.1.3",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.6.0",
+    "dotenv": "^16.3.1",
+    "sass": "^1.63.6",
+    "typescript": "^5.1.3",
+    "vite": "^6.3.5",
+    "vite-plugin-environment": "^1.1.3"
+  },
+  "main": "vite.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

@@ -1,0 +1,8 @@
+type Note = record { title : text; content : text };
+service : {
+  add_note : (text, text) -> (bool);
+  delete_note : (nat64) -> (bool);
+  edit_note : (nat64, text, text) -> (opt Note);
+  get_note_by_index : (nat64) -> (opt Note) query;
+  get_notes : () -> (vec Note) query;
+}

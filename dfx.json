@@ -1,0 +1,31 @@
+{
+  "canisters": {
+    "NotesTakingdApp_backend": {
+      "candid": "src/NotesTakingdApp_backend/NotesTakingdApp_backend.did",
+      "package": "NotesTakingdApp_backend",
+      "type": "rust"
+    },
+    "NotesTakingdApp_frontend": {
+      "dependencies": [
+        "NotesTakingdApp_backend"
+      ],
+      "source": [
+        "src/NotesTakingdApp_frontend/dist"
+      ],
+      "type": "assets"
+    },
+    "internet_identity": {
+      "type": "custom",
+      "wasm": "src/internet_identity/internet_identity_dev.wasm",
+      "candid": "src/internet_identity/internet_identity.did"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}

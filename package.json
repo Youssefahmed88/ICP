@@ -1,0 +1,25 @@
+{
+  "name": "NotesTakingdApp",
+  "private": true,
+  "type": "module",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=7.0.0"
+  },
+  "scripts": {
+    "prebuild": "dfx generate internet_identity",
+    "build": "npm run build --workspace src/NotesTakingdApp_frontend",
+    "start": "npm run start --workspace src/NotesTakingdApp_frontend",
+    "test": "echo \"No tests yet\""
+  },
+  "workspaces": [
+    "src/NotesTakingdApp_frontend"
+  ],
+  "dependencies": {
+    "@dfinity/auth-client": "^2.4.1"
+  },
+  "devDependencies": {
+    "vite": "7.0.4"
+  }
+}

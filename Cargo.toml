@@ -1,0 +1,5 @@
+[workspace]
+members = [
+    "src/NotesTakingdApp_backend"
+]
+resolver = "2"
